@@ -13,7 +13,7 @@ const SingleDataScreen = () => {
 
   const headerHeight = scrollY.interpolate({
     inputRange: [0, 100],
-    outputRange: [60, 0], // Adjust these values as needed
+    outputRange: [60, 0],
     extrapolate: 'clamp',
   });
 
@@ -43,6 +43,7 @@ const SingleDataScreen = () => {
           source={{uri: siteURL}}
           onScroll={handleScroll}
           style={tw`flex-1`}
+          allowsFullscreenVideo={true}
         />
       </Animated.View>
     </View>
