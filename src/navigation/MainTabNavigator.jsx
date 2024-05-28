@@ -8,11 +8,11 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import tw from '../lib/tailwind';
 import {StatusBar} from 'react-native';
-import FavouriteScreen from '../screens/HomeScreen/FavouriteScreen';
+import FavouriteTopTabNavigator from './Favourite/FavouriteTopTabNavigator';
 
 const Tab = createBottomTabNavigator();
 
-const TabNavigator = () => {
+const MainTabNavigator = () => {
   return (
     <>
       <StatusBar barStyle={'dark-content'} backgroundColor="#141823" />
@@ -27,12 +27,14 @@ const TabNavigator = () => {
             borderBottomLeftRadius: 20,
             borderBottomRightRadius: 20,
             borderTopRightRadius: 20,
-            backgroundColor: '#363b49', // Ensure the background color matches your design
-            position: 'absolute', // Optional: To avoid any unwanted spacing at the bottom
-            elevation: 0, // Remove shadow on Android
-            shadowOpacity: 0, // Remove shadow on iOS
-            borderTopWidth: 0, // Remove the top border
+            backgroundColor: '#363b49',
+            position: 'absolute',
+            elevation: 0,
+            shadowOpacity: 0,
+            borderTopWidth: 0,
           },
+          tabBarActiveTintColor: '#c6c6d6',
+          tabBarInactiveTintColor: '#141823',
           tabBarLabel: () => {
             null;
           },
@@ -83,11 +85,11 @@ const TabNavigator = () => {
         <Tab.Screen
           options={{headerShown: false}}
           name="Favourite"
-          component={FavouriteScreen}
+          component={FavouriteTopTabNavigator}
         />
       </Tab.Navigator>
     </>
   );
 };
 
-export default TabNavigator;
+export default MainTabNavigator;

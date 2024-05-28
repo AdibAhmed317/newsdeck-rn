@@ -54,7 +54,7 @@ const SignUp = () => {
             textStyles="text-gray-200"
           />
           <View style={tw`justify-center pt-5 flex-row`}>
-            <Text style={tw`text-lg text-gray-100 font-pregular`}>
+            <Text style={tw`text-lg text-gray-100 font-normal`}>
               Already have an account?
             </Text>
             <TouchableOpacity
@@ -64,12 +64,14 @@ const SignUp = () => {
                 Login.
               </Text>
             </TouchableOpacity>
-            <TouchableOpacity
-              style={tw`ml-2`}
-              onPress={() => navigation.navigate('Newspaper')}>
-              <Text style={tw`text-lg font-semibold text-gray-500`}>asdf.</Text>
-            </TouchableOpacity>
           </View>
+          <TouchableOpacity
+            style={tw`m-3`}
+            onPress={() => navigation.navigate('Newspaper')}>
+            <Text style={tw`text-lg font-semibold text-gray-500 text-center`}>
+              Enjoy without authentication.
+            </Text>
+          </TouchableOpacity>
         </KeyboardAvoidingView>
       </View>
     </>

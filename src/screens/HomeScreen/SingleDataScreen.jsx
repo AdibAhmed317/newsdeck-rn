@@ -4,6 +4,7 @@ import {useNavigation, useRoute} from '@react-navigation/native';
 import WebView from 'react-native-webview';
 import Icon from 'react-native-vector-icons/Feather';
 import tw from '../../lib/tailwind';
+import {ActivityIndicator} from 'react-native';
 
 const SingleDataScreen = () => {
   const route = useRoute();
@@ -44,6 +45,16 @@ const SingleDataScreen = () => {
           onScroll={handleScroll}
           style={tw`flex-1`}
           allowsFullscreenVideo={true}
+          startInLoadingState={true}
+          renderLoading={() => (
+            <View
+              style={[
+                tw`h-full justify-center items-center`,
+                {backgroundColor: '#141823'},
+              ]}>
+              <ActivityIndicator size="large" color="#fff" />
+            </View>
+          )}
         />
       </Animated.View>
     </View>

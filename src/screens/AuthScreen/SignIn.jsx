@@ -40,7 +40,7 @@ const SignIn = () => {
             textStyles="text-gray-200"
           />
           <View style={tw`justify-center pt-5 flex-row`}>
-            <Text style={tw`text-lg text-gray-100 font-pregular`}>
+            <Text style={tw`text-lg text-gray-100 font-normal`}>
               First time here?
             </Text>
             <TouchableOpacity

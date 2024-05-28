@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import AuthStackNavigator from './AuthStackNavigator';
-import TabNavigator from './TabNavigator';
+import MainTabNavigator from './MainTabNavigator';
 import {navigationRef} from '../utils/RootNavigationHelper';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import MainStackNavigator from './MainStackNavigator';
@@ -14,7 +14,7 @@ const AppNavigator = () => {
   return (
     <NavigationContainer ref={navigationRef}>
       <RootStack.Navigator screenOptions={{headerShown: false}}>
-        <RootStack.Screen name="Tab" component={TabNavigator} />
+        <RootStack.Screen name="Tab" component={MainTabNavigator} />
         <RootStack.Screen name="Auth" component={AuthStackNavigator} />
         <RootStack.Screen name="Main" component={MainStackNavigator} />
       </RootStack.Navigator>
