@@ -9,13 +9,11 @@ import MainStackNavigator from './MainStackNavigator';
 const RootStack = createNativeStackNavigator();
 
 const AppNavigator = () => {
-  const isLoggedIn = true;
-
   return (
     <NavigationContainer ref={navigationRef}>
       <RootStack.Navigator screenOptions={{headerShown: false}}>
         <RootStack.Screen name="Tab" component={MainTabNavigator} />
-        <RootStack.Screen name="Auth" component={AuthStackNavigator} />
+        {/* <RootStack.Screen name="Auth" component={AuthStackNavigator} /> */}
         <RootStack.Screen name="Main" component={MainStackNavigator} />
       </RootStack.Navigator>
     </NavigationContainer>

@@ -82,11 +82,11 @@ const MainTabNavigator = () => {
           name="TV"
           component={TVScreen}
         />
-        <Tab.Screen
+        {/* <Tab.Screen
           options={{headerShown: false}}
           name="Favourite"
           component={FavouriteTopTabNavigator}
-        />
+        /> */}
       </Tab.Navigator>
     </>
   );
